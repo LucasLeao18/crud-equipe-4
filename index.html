@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Gerenciador de tarefas da Equipe 4" />
+    <title>Foco — Gerenciador de tarefas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section id="login-view" class="login-shell" aria-labelledby="login-title">
+        <div class="brand-panel">
+          <p class="eyebrow">CRUD · Equipe 4</p>
+          <h1>Organize o trabalho.<br /><span>Entregue com foco.</span></h1>
+          <p class="brand-copy">Uma experiência simples para transformar ideias em tarefas concluídas.</p>
+          <div class="feature-list" aria-label="Recursos do aplicativo">
+            <span>✓ Persistência local</span>
+            <span>✓ Fluxo completo de CRUD</span>
+            <span>✓ Interface responsiva</span>
+          </div>
+        </div>
+
+        <div class="login-panel">
+          <form id="login-form" class="card" novalidate>
+            <div class="logo" aria-hidden="true">F</div>
+            <p class="eyebrow">Bem-vindo</p>
+            <h2 id="login-title">Entre para continuar</h2>
+            <p class="muted">Use seus dados para acessar o painel de tarefas.</p>
+
+            <label for="name">Nome</label>
+            <input id="name" name="name" autocomplete="name" placeholder="Seu nome" required />
+            <small id="name-error" class="field-error" aria-live="polite"></small>
+
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required />
+            <small id="email-error" class="field-error" aria-live="polite"></small>
+
+            <button class="primary-button" type="submit">Acessar painel <span aria-hidden="true">→</span></button>
+            <p class="demo-note">Ambiente demonstrativo — nenhum dado é enviado.</p>
+          </form>
+        </div>
+      </section>
+
+      <section id="app-view" class="app-shell" aria-labelledby="app-title" hidden>
+        <header class="app-header">
+          <a class="wordmark" href="#">Foco<span>.</span></a>
+          <div class="user-area">
+            <span id="user-greeting"></span>
+            <button id="logout-button" class="ghost-button" type="button">Sair</button>
+          </div>
+        </header>
+        <div id="task-app" class="app-content">
+          <p class="eyebrow">Meu painel</p>
+          <h1 id="app-title">Suas tarefas, no ritmo certo.</h1>
+          <p class="muted">O módulo de tarefas será carregado aqui.</p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="auth.js"></script>
+  </body>
+</html>
